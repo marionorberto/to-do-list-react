@@ -1,0 +1,41 @@
+.main {
+  margin: 60px auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  max-width: 400px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 10px 10px rgb(0, 0, 0, 0.4);
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form input[type="text"] {
+  height: 35px;
+  border: none;
+  border: 1px solid #ccc;
+}
+form button[type="submit"] {
+  height: 39px;
+  background-color: rgb(48, 181, 229);
+  border: none;
+  color: #fff;
+  width: 50px;
+  cursor: pointer;
+}
+form button[type="submit"]:hover {
+  background-color: rgb(59, 119, 142);
+}
+.faPlus {
+  font-size: 16px;
+}
+.Task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
