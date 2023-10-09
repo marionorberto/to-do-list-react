@@ -31,5 +31,6 @@ module.exports = {
     'react/state-in-constructor': 0,
     'react/prefer-stateless-function': 0,
     'import/no-duplicates': 0,
+    'no-console': 0,
   },
 };

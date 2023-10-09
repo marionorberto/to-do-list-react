@@ -7,7 +7,26 @@ import { FaEdit, FaWindowClose } from 'react-icons/fa';
 export default class Main extends Component {
   state = {
     newTask: '',
-    tasks: ['estudar js', 'estudar react', 'estudar nodejs'],
+    tasks: [],
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    let { newTask } = this.state;
+    const { tasks } = this.state;
+
+    newTask = newTask.trim();
+    if (!newTask) return;
+    if (tasks.indexOf(newTask) !== -1) {
+      alert('task already added!');
+      return;
+    }
+    const newTasks = [...tasks];
+
+    this.setState({
+      tasks: [...newTasks, newTask],
+    });
   };
 
   handleInputChange = (e) => {
@@ -22,7 +41,7 @@ export default class Main extends Component {
     return (
       <div className="main">
         <h1>Lista de Tarefas</h1>
-        <form action="#">
+        <form onSubmit={this.handleSubmit} action="#">
           <input onChange={this.handleInputChange} value={newTask} type="text" />
           <button type="submit">
             {' '}
